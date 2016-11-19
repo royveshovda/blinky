@@ -6,7 +6,7 @@ defmodule Blinky.Blink do
   end
 
   def init([]) do
-    {:ok, pid} = Gpio.start_link(14, :output)
+    {:ok, pid} = Gpio.start_link(26, :output)
     spawn(fn -> blink_forever(pid) end)
     {:ok, []}
   end
