@@ -1,4 +1,4 @@
-defmodule Blinky do
+defmodule Blinky.Application do
   use Application
 
   # See http://elixir-lang.org/docs/stable/elixir/Application.html
@@ -8,7 +8,7 @@ defmodule Blinky do
 
     # Define workers and child supervisors to be supervised
     children = [
-      worker(Blinky.Blink, [])
+      worker(Blinky.Blink, []),
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
@@ -16,5 +16,4 @@ defmodule Blinky do
     opts = [strategy: :one_for_one, name: Blinky.Supervisor]
     Supervisor.start_link(children, opts)
   end
-
 end
