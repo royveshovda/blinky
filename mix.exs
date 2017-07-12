@@ -49,8 +49,8 @@ defmodule Blinky.Mixfile do
   # Type "mix help deps" for more examples and options
   def deps do
     [
-      {:nerves, "~> 0.5.0", runtime: false},
-      {:elixir_ale, "~> 0.6.2"}
+      {:nerves, "~> 0.6.1", runtime: false},
+      {:elixir_ale, "~> 1.0.0"}
     ] ++
     deps(@target)
   end
